@@ -1,12 +1,13 @@
 import java.util.Scanner;
 
 public class AnalizadorTexto {
+    private static final int ALFABETO_SIZE = 26;// Número total de letras en el alfabeto
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese un texto para analizar:");
-        String texto = scanner.nextLine().toLowerCase();
+        String texto = sc.nextLine().toLowerCase();
 
-        int[] frecuencia = new int[26];
+        int[] frecuencia = new int[ALFABETO_SIZE];
         int totalLetras = 0;
         int totalPalabras = 0;
         int totalVocales = 0;
@@ -36,7 +37,7 @@ public class AnalizadorTexto {
             }
         }
 
-        scanner.close();
+        sc.close();
     }
 }
 
